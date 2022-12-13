@@ -1,3 +1,1 @@
-# php-template-katz
-
-## katz shopping mall
+## php-template-katz
