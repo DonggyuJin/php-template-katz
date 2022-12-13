@@ -1,0 +1,19 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 520px;
+  height: 700px;
+  padding: 60px 80px;
+  margin: auto;
+  margin-top: 50px;
+  font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
