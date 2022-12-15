@@ -30,7 +30,7 @@
             <div class="collapse navbar-collapse offset-md-7" id="navbarScroll">
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                 <li class="nav-item px-2">
-                <a class="nav-link active" aria-current="page" href="#">SHOP</a>
+                <a class="nav-link active" aria-current="page" href="/shop/shop_list.php">SHOP</a>
                 </li>
                 <li class="nav-item px-2">
                 <a class="nav-link active" href="#">BOARD</a>
