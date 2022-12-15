@@ -30,14 +30,14 @@
                 
                 ?>
         <script>
-        alert('회원가입에 성공하였습니다.\n다시 로그인 해주세요.');
+        alert('회원가입에 성공하였습니다.');
         location.replace("/");
         </script>
         <?php } 
                 else {
                 ?>
         <script>
-        alert("회원가입에 실패하였습니다.");
+        alert('회원가입에 실패하였습니다.');
         history.back();
         </script>
         <?php }
