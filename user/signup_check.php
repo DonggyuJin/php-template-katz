@@ -1,6 +1,5 @@
 <?php 
 
-    // db_conn의 mysqli_connect 연결
     include "../dbconn.php";
 
     $userid = $_POST['userid'];

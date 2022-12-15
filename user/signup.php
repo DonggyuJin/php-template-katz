@@ -4,7 +4,7 @@ include('../inc/top.php');
 
 <div class="form-signin border">
     <form method="post" action="signup_check.php">
-        <h1 class="text-center mt-1 mb-5 fw-bold fs-6">Katz 쇼핑몰 가입하기 🛒</h1>
+        <h1 class="text-center mb-4 fw-bold fs-4">🛒 회원가입 🛒</h1>
         <div class="pt-3">
             <div class="form-floating mb-3">
                 <input type="text" name="userid" class="form-control floatingInput" id="username">
