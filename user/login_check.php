@@ -15,6 +15,8 @@
 
         if($row['userpw'] == $userpw){
             mysqli_free_result($login_result);
+            mysqli_close($conn);
+            echo "<script> window.location.href='/index.php'; </script>";
         } else {
             ?>
             <script>

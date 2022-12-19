@@ -10,7 +10,7 @@ body {
   height: 700px;
   padding: 60px 80px;
   margin: auto;
-  margin-top: 200px;
+  margin-top: 100px;
   font-weight: 400;
 }
 
@@ -112,4 +112,12 @@ body {
   margin-right: 10px;
   padding-right: 10px;
   border-right: 1px solid #e5e5e5;
+}
+
+.board_content {
+  width: 100%;
+  height: 100px;
+  padding: 60px 160px 60px 65px;
+  margin: auto;
+  font-weight: 400;
 }

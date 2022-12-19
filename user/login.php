@@ -4,7 +4,7 @@ include('../inc/top.php');
 
 <div class="form-signin border">
       <form method="GET" name="Login_form" action="login_check.php">
-        <h1 class="mt-4 mb-2 fw-bold fs-2 text-center">KATZ</h1>
+        <h1 class="mt-1 mb-2 fw-bold fs-2 text-center">KATZ</h1>
         <h1 class="mb-5 fw-bold fs-6 fst-italic text-center">KATZ IS A SHOPPING MALL BRAND</h1>
         <div class="form-floating">
           <input type="text" 
