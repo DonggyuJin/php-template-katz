@@ -27,37 +27,41 @@ include "../dbconn.php";
 ?>
 	<div class="mx-auto board_content">
 	<div id="container my-3">
-		<h2 class="border-bottom py-2"><?php echo $board_content['title']; ?></h2>
+		<h2 class="border-bottom py-2 text-center"><?php echo $board_content['title']; ?></h2>
 		<div class="card my-3">
 			<div class="card-body">
-				<div class="card-text" style="white-space: pre-line">
-					<?php echo nl2br("$board_content[content]"); ?>
-				</div>
-				<!-- <div class="card-text" style="white-space: pre-line">
-					파일: <a href="upload/<-?php echo $board_content['file'];?>" download><-?php echo $board_content['file'];?></a>
-				</div> -->
-				<div class="d-flex mt-3">
-					<div class="badge bg-light text-dark p-2 text-start me-2">
+            <div class="d-flex">
+                <div class="ms-auto me-0">
+					<div class="badge bg-white text-dark p-2 text-start me-2">
 						<div class="mb-2">date</div>
 						<div><?php echo $board_content['regdate']; ?></div>
 					</div>
-					<div class="badge bg-light text-dark p-2 text-start">
-					<div class="mb-2"><?php echo $board_content['username']; ?></div>
-					<div>
-						조회: <?php echo $board_content['viewcnt']; ?>
+					<div class="badge bg-white text-dark p-2 text-start">
+                        <div class="mb-2"><?php echo $board_content['username']; ?></div>
+                        <div>
+                            조회: <?php echo $board_content['viewcnt']; ?>
+                        </div>
 					</div>
-					</div>
-				</div>
-				<div class="my-3">
-					<a href="board_list.php" 
-					class="text-white btn btn-sm btn-success me-1">
-					목록
-					</a>
-					<a href="board_delete.php?id=<?php echo $board_content['boardidx']; ?>" 
-					class="text-white btn btn-sm btn-danger">
-					삭제
-					</a>
-				</div>
+                    </div>
+			</div>
+			<div class="card-text text-wrap py-5 text-center fs-5">
+				<?php echo nl2br("$board_content[content]"); ?>
+			</div>
+			<!-- <div class="card-text" style="white-space: pre-line">
+				파일: <a href="upload/<-?php echo $board_content['file'];?>" download><-?php echo $board_content['file'];?></a>
+			</div> -->
+			
+			<div class="d-flex my-1">
+                <div class="ms-auto me-0">
+                    <a href="board_list.php" 
+                    class="text-white btn btn-warning me-1 board_btn">
+                    목록
+                    </a>
+                    <a href="board_delete.php?id=<?php echo $board_content['boardidx']; ?>" 
+                    class="text-white btn btn-danger board_btn me-1">
+                    삭제
+                    </a>
+                </div>
 			</div>
 		</div>
     </div>

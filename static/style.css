@@ -121,3 +121,7 @@ body {
   margin: auto;
   font-weight: 400;
 }
+
+.board_btn {
+  width: 85px;
+}
