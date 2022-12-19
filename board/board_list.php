@@ -54,7 +54,7 @@ include "../dbconn.php";
           <?php } ?>
         </table>
         <div class="d-flex justify-content-end">
-          <a class="text-dark text-decoration-none" href="/board_write.html">글쓰기</a>
+          <a class="board_btn btn btn-success text-white text-decoration-none" href="#">글쓰기</a>
         </div>
       </div>
       </div>

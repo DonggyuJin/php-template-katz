@@ -57,7 +57,7 @@ include "../dbconn.php";
                     class="text-white btn btn-warning me-1 board_btn">
                     목록
                     </a>
-                    <a href="board_delete.php?id=<?php echo $board_content['boardidx']; ?>" 
+                    <a href="board_delete.php?boardidx=<?php echo $board_content['boardidx']; ?>" 
                     class="text-white btn btn-danger board_btn me-1">
                     삭제
                     </a>
