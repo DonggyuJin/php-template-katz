@@ -17,5 +17,5 @@
 
     session_destroy();
     
-    echo "<script> document.location.href='/index.php'; alert('로그아웃 하셨습니다.'); </script>"; 
+    echo "<script> alert('로그아웃 하셨습니다.'); document.location.href='/index.php'; </script>"; 
 ?>

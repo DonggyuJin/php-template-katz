@@ -7,11 +7,17 @@ include "../dbconn.php";
 ?>
 
 <?php
+
+	if(!session_id()) {
+		session_start();
+	}
+
     $board_idx = $_GET['boardidx'];
+	$userid = $_SESSION['userid'];
 
 	$is_viewcnt = false;
 	if (!isset($_COOKIE[md5("board_{$board_idx}")])) {    
-		setcookie(md5("board_{$board_idx}"), md5('$board_idx'), time() + 60 * 60 * 1);
+		setcookie(md5("board_{$board_idx}"), $board_idx, time() + 60 * 60 * 1);
 		$is_viewcnt = true;
 	}
 

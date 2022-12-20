@@ -30,7 +30,7 @@
                 ?>
         <script>
         alert('회원가입에 성공하였습니다.');
-        location.replace("/");
+        location.replace("/user/login.php");
         </script>
         <?php } 
                 else {
