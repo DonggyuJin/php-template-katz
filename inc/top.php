@@ -47,10 +47,26 @@
                 </ul>
                 </li> -->
                 <li class="nav-item px-2">
-                <a class="nav-link active" href="#">ABOUT</a>
+                <a class="nav-link active" href="/about/about_content.php">ABOUT</a>
                 </li>
                 <li class="nav-item px-2">
-                <a class="nav-link active" href="/user/login.php">LOGIN</a>
+                        <?php
+
+                            if(!session_id()) {
+                                session_start();
+                            }
+                            
+                            if($_SESSION['userid']) { ?>
+                                <a class="nav-link active" href="/user/logout.php">LOGOUT</a>
+                            <?php
+                            } 
+                            else 
+                            { 
+                            ?> 
+                                <a class="nav-link active" href="/user/login.php">LOGIN</a>
+                            <?php
+                            } 
+                        ?>
                 </li>
             </ul>
             </div>

@@ -53,9 +53,23 @@ include "../dbconn.php";
           </tbody>
           <?php } ?>
         </table>
-        <div class="d-flex justify-content-end">
-          <a class="board_btn btn btn-success text-white text-decoration-none" href="#">글쓰기</a>
-        </div>
+        <?php
+
+          if(isset($_SESSION['username'])) {
+            ?>
+              <div class="d-flex justify-content-end">
+              <a class="board_btn btn btn-success text-white text-decoration-none" href="/board/board_create.php">글쓰기</a>
+              </div>
+            <?php
+          } else {
+            ?>
+            <div class="d-flex justify-content-end">
+              <a class="board_btn btn btn-secondary text-white text-decoration-none disabled" href="/board/board_create.php">글쓰기</a>
+            </div>
+            <?php
+          }
+        ?>
+        
       </div>
       </div>
     </div>

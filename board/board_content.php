@@ -10,16 +10,16 @@ include "../dbconn.php";
     $board_idx = $_GET['boardidx'];
 
 	$is_viewcnt = false;
-	if (!isset($_COOKIE["board_{$board_idx}"])) {    
-		setcookie(md5("board_{$board_idx}"), $board_idx, time() + 60 * 60 * 1);
+	if (!isset($_COOKIE[md5("board_{$board_idx}")])) {    
+		setcookie(md5("board_{$board_idx}"), md5('$board_idx'), time() + 60 * 60 * 1);
 		$is_viewcnt = true;
 	}
 
 	if ($is_viewcnt) {
-		$view_query = mysqli_fetch_array(mysqli_query($conn, "select * from katz_board where boardidx = '".$board_idx."'"));
-		$view_result = $view['viewcnt'] + 1;
+		$view = mysqli_fetch_array(mysqli_query($conn, "select * from katz_board where boardidx = '".$board_idx."'"));
+		$view = $view['viewcnt'] + 1;
 
-		$fet = mysqli_query($conn, "update katz_board set viewcnt = '".$view_result."' where boardidx = '".$board_idx."'");
+		$fet = mysqli_query($conn, "update katz_board set viewcnt = '".$view."' where boardidx = '".$board_idx."'");
 	}
 
 	$board_query = mysqli_query($conn, "select * from katz_board where boardidx='".$board_idx."'");
@@ -53,9 +53,9 @@ include "../dbconn.php";
 			
 			<div class="d-flex my-1">
                 <div class="ms-auto me-0">
-                    <a href="board_list.php" 
+                    <a href="board_modify.php?boardidx=<?php echo $board_content['boardidx']; ?>" 
                     class="text-white btn btn-warning me-1 board_btn">
-                    목록
+                    수정
                     </a>
                     <a href="board_delete.php?boardidx=<?php echo $board_content['boardidx']; ?>" 
                     class="text-white btn btn-danger board_btn me-1">
