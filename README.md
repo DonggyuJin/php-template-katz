@@ -20,4 +20,4 @@
 
 ## 시연
 
-<img width="80%" src="https://user-images.githubusercontent.com/97138841/209434430-2c8f2faf-6a6b-4b7c-aa2b-533157371729.gif"/>
+![php-katz](https://user-images.githubusercontent.com/97138841/209434430-2c8f2faf-6a6b-4b7c-aa2b-533157371729.gif)
