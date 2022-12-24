@@ -25,7 +25,7 @@ include('../inc/top.php');
         <button class="mt-5 w-100 btn btn-lg" 
                 id="loginBtn"
                 type="submit" 
-                onClick="javascript:check()">
+                onClick="javascript:login_check()">
           로그인
         </button>
         <span class="line">
@@ -34,7 +34,7 @@ include('../inc/top.php');
         <button class="w-100 btn btn-lg mb-1"
                 id="kakaoBtn"
                 type="button"
-                onClick="javascript:readyKakaoService()">
+                onClick="javascript:ready_service()">
           <img class="kakaoBtn" src="../static/img_kakao_logo.svg" alt="kakao"/>
           <span class="ms-1">카카오로 로그인</span>
         </button>
@@ -46,31 +46,21 @@ include('../inc/top.php');
         <span class="mx-auto"></span>
         <p> 
           <a type="button"
-                  onClick="javascript:readyService()"
+                  onClick="javascript:ready_service()"
                   class="text-secondary"
                   id="account">계정 찾기</a>
         </p>
         <p>
           <a type="button"
-                  onClick="javascript:readyService()"
+                  onClick="javascript:ready_service()"
                   class="text-secondary ms-3">비밀번호 찾기</a>
         </p>
       </div>
     </div>
-    <script>
-      function check() {
-        if(Login_form.username.value == "" || Login_form.password.value == "") {
-          alert("아이디 및 비밀번호가 유효하지 않습니다.");
-          Login_form.username.value = "";
-          Login_form.password.value = "";
-        }
-      }
-      
-      function readyKakaoService() {
-        return alert("현재 준비 중인 서비스입니다.");
-      }
-    </script>
-  </body>
+
+<?php
+include('/js/scripts.js');
+?>
 
 <?php
 include('../inc/bottom.php');
